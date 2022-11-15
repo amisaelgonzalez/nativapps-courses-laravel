@@ -7,8 +7,6 @@ use App\Models\Schedule;
 use App\Models\Student;
 use Illuminate\Database\Seeder;
 
-use function GuzzleHttp\Promise\each;
-
 class DatabaseSeeder extends Seeder
 {
     /**
