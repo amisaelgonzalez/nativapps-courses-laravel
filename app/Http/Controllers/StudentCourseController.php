@@ -16,7 +16,7 @@ class StudentCourseController extends Controller
      */
     public function index(Student $student)
     {
-        $courses = Course::orderBy('id')->all();
+        $courses = Course::orderBy('id')->get();
         $student = Student::with('courses.schedules')->find($student->id);
 
         return Inertia::render('StudentCourses/Index', [
