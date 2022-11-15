@@ -18,7 +18,7 @@ class ScheduleController extends Controller
      */
     public function index(Course $course)
     {
-        $schedules = Schedule::where('course_id', $course->id)->get();
+        $schedules = Schedule::where('course_id', $course->id)->orderBy('id')->get();
 
         return Inertia::render('Schedules/Index', [
             'course'    => $course,

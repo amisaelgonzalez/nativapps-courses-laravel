@@ -16,7 +16,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::paginate(10);
+        $students = Student::orderBy('id')->paginate(10);
 
         return Inertia::render('Students/Index', [
             'students' => $students,

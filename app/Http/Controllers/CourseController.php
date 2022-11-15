@@ -16,7 +16,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::paginate(10);
+        $courses = Course::orderBy('id')->paginate(10);
 
         return Inertia::render('Courses/Index', [
             'courses' => $courses,
